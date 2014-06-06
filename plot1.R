@@ -23,6 +23,9 @@ datains <- datain[(datain[,1] >= startdate & datain[,1] <= enddate),]
 #convert variable 3:9 to numeric
 datains[,3:9] <- sapply(datains[,3:9],as.numeric)
 
+#set graph to single panel
+par(mfcol=c(1,1))
+
 
 #draw graph 1
 hist(datains[,3],xlab='Global Active Power(kilowatts)',
