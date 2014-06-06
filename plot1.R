@@ -1,3 +1,4 @@
+#This code is to draw figure 1
 
 #check directory
 
@@ -23,10 +24,11 @@ datains <- datain[(datain[,1] >= startdate & datain[,1] <= enddate),]
 #convert variable 3:9 to numeric
 datains[,3:9] <- sapply(datains[,3:9],as.numeric)
 
-#set graph to single panel
-par(mfcol=c(1,1))
+#set graph to a single panel
+par(mfcol=c(1,1),mar=c(4,4,2,2))
 
 
 #draw graph 1
 hist(datains[,3],xlab='Global Active Power(kilowatts)',
      freq=T,main="Global Active Power",col="red")
+axis(side=2,at=c(200,400,600,800,1000,1200))
