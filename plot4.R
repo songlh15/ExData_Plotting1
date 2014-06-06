@@ -39,7 +39,7 @@ plot2[,3:9] <- sapply(plot2[,3:9],as.numeric)
 
 #set graph to 2 by 2 panels
 
-par(mfcol=c(2,2))
+par(mfcol=c(2,2),mar=c(4,4,1,1))
 
 #panel 1
 plot(plot2[,10],plot2[,3],pch=19,col="white",main=' ',xlab=' ',ylab='Global Active Power(kilowatts)')
@@ -50,7 +50,7 @@ plot(plot2[,10],plot2[,7],pch=19,col="white",main=' ',xlab=' ',ylab='Energy sub 
 lines(plot2[,10],plot2[,7],col='black')
 lines(plot2[,10],plot2[,8],col='red')
 lines(plot2[,10],plot2[,9],col='blue')
-legend("topright", lty= c(1,1,1), 
+legend("topright", lty= c(1,1,1), cex=0.75,
        col = c("black", "red", "blue"), 
        legend = c("sub_metering_1", "sub_metering_2", "sub_metering_3"),bty="n" )
 
